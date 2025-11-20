@@ -20,8 +20,6 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd testing/githubworkflow/   # your app folder on VPS
+            cd publi_html/sshtesting/sshtesting   # your app folder on VPS
             git pull origin main
-            npm install
-            npm run build
-            pm2 restart myapp
+            pm2 restart sshtesting
